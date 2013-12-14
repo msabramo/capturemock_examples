@@ -1,0 +1,17 @@
+<-PYT:import requests
+<-PYT:requests.get('http://www.google.com/')
+->RET:Instance('Response(object)', 'response1')
+<-PYT:response1.__repr__()
+->RET:'<Response [999]>'
+<-PYT:response1.url
+->RET:u'http://www.google.com/'
+<-PYT:response1.status_code
+->RET:999
+<-PYT:response1.text
+->RET:u'This is a fake response from CaptureMock!'
+<-PYT:response1.headers
+->RET:Instance('CaseInsensitiveDict(_abcoll.MutableMapping)', 'caseinsensitivedict1')
+<-PYT:caseinsensitivedict1.__repr__()
+->RET:'CaseInsensitiveDict({\'X-Foo\': \'Bar\', \'Server\': \'Fake (capturemock)\', \'Content-Type\': \'text/plain; charset=UTF-8\'})'
+<-PYT:caseinsensitivedict1.__getitem__('Content-Type')
+->RET:'text/plain; charset=UTF-8'
