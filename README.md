@@ -5,8 +5,6 @@ Examples of using
 [CaptureMock](https://pypi.python.org/pypi/CaptureMock) to record and
 replay calls in Python code.
 
-Examples of using capturemock
-
 ```
 (capturemock)marca@marca-mac2:~/dev/git-repos/capturemock_examples$ python test_requests.py
 resp = <Response [999]>
