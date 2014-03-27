@@ -16,3 +16,18 @@ def test_sqlalchemy():
         + '\tDeveloper Edition (64-bit) on Windows NT 6.1 <X64> ' \
         + '(Build 7601: Service Pack 1)\n'
     assert result == expected_output
+
+
+@capturemock('sqlalchemy', mode=REPLAY)
+def test_sqlalchemy_interactive():
+    import sqlalchemy
+
+    db_uri = 'mssql+pymssql://user:password@localhost/database'
+    engine = sqlalchemy.create_engine(db_uri)
+    conn = engine.connect()
+    result = conn.execute('SELECT @@VERSION').scalar()
+    print(result)
+
+
+if __name__ == '__main__':
+    test_sqlalchemy_interactive()
