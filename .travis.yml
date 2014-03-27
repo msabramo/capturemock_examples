@@ -4,4 +4,6 @@ python:
   - 2.7
 install: python setup.py install
 before_script: pip install -r requirements-test.txt
-script: py.test
+script:
+  - py.test
+  - python test_requests.py
