@@ -1,0 +1,13 @@
+<-PYT:import sqlalchemy
+<-PYT:sqlalchemy.create_engine('mssql+pymssql://user:password@localhost/database')
+->RET:Instance('Engine(Connectable, Identified, object)', 'engine1')
+<-PYT:engine1.connect()
+->RET:Instance('Connection(Connectable, object)', 'connection1')
+<-PYT:connection1.execute('SELECT @@VERSION')
+->RET:Instance('ResultProxy(object)', 'resultproxy_select___version')
+<-PYT:resultproxy_select___version.scalar()
+->RET:u'''Microsoft SQL Server 2012 - 11.0.2100.60 (X64) 
+	Feb 10 2012 19:39:15 
+	Copyright (c) Microsoft Corporation
+	Developer Edition (64-bit) on Windows NT 6.1 <X64> (Build 7601: Service Pack 1)
+'''
