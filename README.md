@@ -1,6 +1,9 @@
 capturemock_examples
 ====================
 
+[![Build
+Status](https://travis-ci.org/msabramo/capturemock_examples.svg?branch=master)](https://travis-ci.org/msabramo/capturemock_examples)
+
 Examples of using
 [CaptureMock](https://pypi.python.org/pypi/CaptureMock) to record and
 replay calls in Python code.
