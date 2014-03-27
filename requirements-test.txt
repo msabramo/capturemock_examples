@@ -1,0 +1,2 @@
+bzr+lp:capturemock#egg=capturemock
+pytest
