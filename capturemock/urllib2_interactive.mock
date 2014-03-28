@@ -1,3 +1,4 @@
+<-PYT:import urllib
 <-PYT:import urllib2
 <-PYT:urllib2.urlopen('http://www.google.com/')
 ->RET:Instance('addinfourl(addbase)', 'addinfourl1')

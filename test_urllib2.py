@@ -11,6 +11,7 @@ def test_urllib2():
     # and the `headers` attribute of the response is of a class defined in the
     # httplib module.
 
+    import urllib
     import urllib2
 
     resp = urllib2.urlopen("http://www.google.com/")
@@ -30,6 +31,7 @@ def urllib2_interactive():
     # and the `headers` attribute of the response is of a class defined in the
     # httplib module.
 
+    import urllib
     import urllib2
 
     resp = urllib2.urlopen("http://www.google.com/")
