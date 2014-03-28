@@ -1,0 +1,14 @@
+<-PYT:import urllib
+<-PYT:import urllib2
+<-PYT:urllib2.urlopen('http://www.google.com/')
+->RET:Instance('addinfourl(addbase)', 'addinfourl1')
+<-PYT:addinfourl1.code
+->RET:702
+<-PYT:addinfourl1.url
+->RET:'http://www.google.com/when-pigs-fly'
+<-PYT:addinfourl1.headers
+->RET:Instance('HTTPMessage(mimetools.Message)', 'httpmessage1')
+<-PYT:httpmessage1.__getitem__('X-Fake-Message')
+->RET:'This is a fake response header'
+<-PYT:addinfourl1.read()
+->RET:'''Simulating a fake error'''

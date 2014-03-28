@@ -8,3 +8,4 @@ script:
   - py.test
   - python test_requests.py
   - python test_sqlalchemy.py
+  - python test_urllib2.py
