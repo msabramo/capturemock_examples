@@ -19,7 +19,7 @@ def test_sqlalchemy():
 
 
 @capturemock('sqlalchemy', mode=REPLAY)
-def test_sqlalchemy_interactive():
+def sqlalchemy_interactive():
     import sqlalchemy
 
     db_uri = 'mssql+pymssql://user:password@localhost/database'
@@ -30,4 +30,4 @@ def test_sqlalchemy_interactive():
 
 
 if __name__ == '__main__':
-    test_sqlalchemy_interactive()
+    sqlalchemy_interactive()
