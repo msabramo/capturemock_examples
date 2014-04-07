@@ -18,8 +18,3 @@ resp.headers = CaseInsensitiveDict({'X-Foo': 'Bar', 'Server': 'Fake
 (capturemock)', 'Content-Type': 'text/plain; charset=UTF-8'})
 resp.headers['Content-Type'] = 'text/plain; charset=UTF-8'
 ```
-
-See also:
-
-* https://github.com/msabramo/capturemock_test_sqlalchemy
-
